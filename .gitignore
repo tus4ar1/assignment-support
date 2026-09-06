@@ -1,0 +1,12 @@
+wp-config.php
+
+# Windows files
+Thumbs.db
+Desktop.ini
+
+# Editor files
+.vscode/
+.idea/
+
+# Logs
+*.log

@@ -1,0 +1,22 @@
+<?php
+/** Hero and enquiry area. @package Assignment_Support */
+?>
+<section class="hero section" aria-labelledby="hero-title">
+	<div class="container hero-grid">
+		<div>
+			<p class="eyebrow"><?php esc_html_e( 'Ethical academic support', 'assignment-support' ); ?></p>
+			<h1 id="hero-title"><?php esc_html_e( 'Build confidence in your academic work', 'assignment-support' ); ?></h1>
+			<p class="lead"><?php esc_html_e( 'Get guidance with planning, research, editing, referencing and data analysis while keeping your work your own.', 'assignment-support' ); ?></p>
+			<div class="button-group">
+				<a class="button" href="#enquiry"><?php esc_html_e( 'Get a Free Support Plan', 'assignment-support' ); ?></a>
+				<a class="button button-secondary" href="https://wa.me/917878273480" target="_blank" rel="noreferrer"><?php esc_html_e( 'WhatsApp now', 'assignment-support' ); ?></a>
+			</div>
+		</div>
+		<div class="enquiry-card" id="enquiry">
+			<h2><?php esc_html_e( 'Tell us what support you need', 'assignment-support' ); ?></h2>
+			<p><?php esc_html_e( 'A secure enquiry form will appear here when its form shortcode is configured.', 'assignment-support' ); ?></p>
+			<?php echo wp_kses_post( apply_filters( 'assignment_support_enquiry_form', '<p class="placeholder">[Enquiry form shortcode placeholder]</p>' ) ); ?>
+		</div>
+	</div>
+</section>
+
