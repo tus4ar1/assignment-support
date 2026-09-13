@@ -14,9 +14,13 @@
 		</div>
 		<div class="enquiry-card" id="enquiry">
 			<h2><?php esc_html_e( 'Tell us what support you need', 'assignment-support' ); ?></h2>
-			<p><?php esc_html_e( 'A secure enquiry form will appear here when its form shortcode is configured.', 'assignment-support' ); ?></p>
-			<?php echo wp_kses_post( apply_filters( 'assignment_support_enquiry_form', '<p class="placeholder">[Enquiry form shortcode placeholder]</p>' ) ); ?>
+			<?php
+			if ( shortcode_exists( 'assignment_support_enquiry_form' ) ) {
+				echo do_shortcode( '[assignment_support_enquiry_form]' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Shortcode renders escaped fields and markup.
+			} else {
+				echo '<p>' . esc_html__( 'Please contact us on WhatsApp while the enquiry form is being set up.', 'assignment-support' ) . '</p>';
+			}
+			?>
 		</div>
 	</div>
 </section>
-

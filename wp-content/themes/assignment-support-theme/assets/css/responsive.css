@@ -3,6 +3,7 @@
 	.custom-logo { max-height: 5.5rem; }
 	.menu-toggle { display: inline-flex; }
 	.header-cta { display: none; }
+	.blog-nav-link { margin-left: auto; }
 	.primary-navigation { display: none; position: absolute; top: 100%; left: 0; width: 100%; padding: 1rem; background: var(--white); border-bottom: 1px solid var(--grey-200); box-shadow: var(--shadow); }
 	.primary-navigation.is-open { display: block; }
 	.primary-navigation ul { flex-direction: column; align-items: stretch; }
