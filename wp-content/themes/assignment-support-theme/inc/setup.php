@@ -30,6 +30,12 @@ function assignment_support_setup() {
 }
 add_action( 'after_setup_theme', 'assignment_support_setup' );
 
+/** Link to the Posts page configured under Settings > Reading. */
+function assignment_support_blog_url() {
+	$posts_page = (int) get_option( 'page_for_posts' );
+	return $posts_page ? get_permalink( $posts_page ) : home_url( '/blog/' );
+}
+
 /**
  * Provide a default site name and logo when none is set in WordPress.
  */
@@ -62,4 +68,3 @@ function assignment_support_site_logo_markup() {
 		$site_name
 	);
 }
-
