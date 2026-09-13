@@ -38,6 +38,7 @@
 			);
 			?>
 		</nav>
+		<a class="blog-nav-link" href="<?php echo esc_url( assignment_support_blog_url() ); ?>"><?php esc_html_e( 'Blog', 'assignment-support' ); ?></a>
 		<a class="button header-cta" href="<?php echo esc_url( home_url( '/#enquiry' ) ); ?>"><?php esc_html_e( 'Get a Free Support Plan', 'assignment-support' ); ?></a>
 	</div>
 </header>
